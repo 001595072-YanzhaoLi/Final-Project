@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalporject.C.Controller">
+    <children>
+        <AnchorPane prefHeight="49.0" prefWidth="677.0">
+            <children>
+                <Button fx:id="importButton" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#onClickImport" text="Import" />
+                <TextField fx:id="importURL" layoutX="73.0" layoutY="4.0" prefHeight="25.0" prefWidth="597.0" promptText="URL" />
+            </children>
+        </AnchorPane>
+        <SplitPane dividerPositions="0.29545454545454547" prefHeight="324.0" prefWidth="500.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="319.0" prefWidth="233.0">
+                    <children>
+                        <ListView fx:id="listBefore" layoutX="-4.0" layoutY="23.0" onMouseClicked="#ListClick" prefHeight="296.0" prefWidth="200.0" />
+                  <Label layoutX="14.0" layoutY="6.0" text="Before processing" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="375.0">
+                    <children>
+                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="321.0" prefWidth="299.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <ImageView fx:id="imageThumb" fitHeight="150.0" fitWidth="290.0" layoutX="1.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TextArea fx:id="textOutput" editable="false" layoutX="7.0" layoutY="5.0" prefHeight="136.0" prefWidth="284.0" />
+                           </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                  <ListView fx:id="listAfter" layoutX="299.0" layoutY="21.0" prefHeight="296.0" prefWidth="174.0" />
+                  <Label layoutX="310.0" layoutY="3.0" text="After processing" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <AnchorPane prefHeight="49.0" prefWidth="677.0">
+            <children>
+                <TextField fx:id="tarFor" layoutX="63.0" layoutY="5.0" prefHeight="25.0" prefWidth="473.0" promptText="Target Format" />
+                <Button fx:id="ConvertButton" layoutX="540.0" layoutY="5.0" mnemonicParsing="false" onAction="#onClickConvert" text="Convert" />
+            <Button fx:id="DelButton" layoutX="7.0" layoutY="5.0" mnemonicParsing="false" onAction="#onClickDel" text="Delete" />
+            <Button fx:id="downButton" layoutX="602.0" layoutY="5.0" mnemonicParsing="false" onAction="#onClickDown" text="Download" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
